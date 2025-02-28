@@ -30,7 +30,6 @@ namespace P01_2022ML601.Controllers
                                 r.Id,
                                 r.FechaReserva,
                                 r.HoraInicio,
-                                r.Duracion,
                                 Usuario = u.Nombre,
                                 Espacio = e.NumeroEspacio,
                                 e.Ubicacion,
@@ -108,7 +107,6 @@ namespace P01_2022ML601.Controllers
 
             reservaActual.FechaReserva = reservaModificar.FechaReserva;
             reservaActual.HoraInicio = reservaModificar.HoraInicio;
-            reservaActual.Duracion = reservaModificar.Duracion;
 
             _context.Entry(reservaActual).State = EntityState.Modified;
             _context.SaveChanges();
